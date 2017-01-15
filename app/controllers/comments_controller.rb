@@ -9,9 +9,4 @@ class CommentsController < ApplicationController
 	def comment_params
 		params.require(:comment).permit(:author_name, :body)
 	end
-
-	def show
-		@comment = Comment.new
-		@comment.article_id = @article.id
-	end
 end
